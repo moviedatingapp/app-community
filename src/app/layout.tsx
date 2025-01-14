@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
+import TopNavbar from "@/components/TopNavbar";
 
 export const metadata: Metadata = {
   title: "Movie App",
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` antialiased`}>{children}</body>
+      <body className={` antialiased`}>
+        <TopNavbar />
+        {children}
+      </body>
     </html>
   );
 }

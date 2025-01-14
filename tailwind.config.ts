@@ -15,8 +15,12 @@ export default {
       "red-bright": "#FF1E1E",
       "blue-secondary": "#11009E",
       "blue-primary": "#0766AD",
-      "light-grey": "#B0B1B2",
+      "light-grey": "#EFF3EA",
       "light-grey-border": "#DCDEDF",
+      "light-grey-placeholder": "#C7C8CC",
+      "dark-grey": "#212A3E",
+      "bright-orange": "#F93827",
+      transparent: "rgba(0, 0, 0, 0)",
     },
 
     fontSize: {
@@ -61,6 +65,12 @@ export default {
       "BH-Satoshi-light": "Satoshi Type Light",
       "BH-Satoshi-bold": "Satoshi Type Bold",
       "BH-Satoshi-medium": "Satoshi Type Medium",
+    },
+    extend: {
+      width: {
+        108: "30rem",
+        116: "35rem",
+      },
     },
   },
   plugins: [],
