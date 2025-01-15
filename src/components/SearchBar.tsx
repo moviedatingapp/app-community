@@ -2,14 +2,18 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 
 export default function SearchBar() {
-  const { register } = useForm();
+  const { register, handleSubmit } = useForm();
   const [isTyping, setIsTyping] = useState<boolean>(false);
-
   return (
     <div>
-      <form>
+      <form
+        onSubmit={handleSubmit(() => {
+          redirect("/search");
+        })}
+      >
         <div
           className={`outline-none px-5 bg-light-grey w-116 rounded-56 flex hover:bg-light-grey-border ${
             isTyping

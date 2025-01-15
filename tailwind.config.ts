@@ -16,9 +16,9 @@ export default {
       "blue-secondary": "#11009E",
       "blue-primary": "#0766AD",
       "light-grey": "#EFF3EA",
-      "light-grey-border": "#DCDEDF",
+      "light-grey-border": "#cccccc",
       "light-grey-placeholder": "#C7C8CC",
-      "dark-grey": "#212A3E",
+      "dark-grey": "#202c38",
       "bright-orange": "#F93827",
       transparent: "rgba(0, 0, 0, 0)",
     },
@@ -57,6 +57,7 @@ export default {
       24: "1.5rem",
       32: "2rem",
       56: "3.5rem",
+      full: "100%",
     },
 
     fontFamily: {
