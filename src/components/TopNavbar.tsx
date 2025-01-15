@@ -14,8 +14,27 @@ export default function TopNavbar() {
           <SearchBar />
         </div>
         <div>
-          <ul className="flex gap-8">
-            <li className=" h-10 w-10 rounded-full hover:bg-light-grey flex items-center justify-center">
+          <ul className="flex gap-4">
+            <li className=" h-10 w-10 rounded-full hover:bg-light-grey flex items-center justify-center cursor-pointer">
+              <Image
+                src={"/assets/icons/message-circle-more.svg"}
+                alt="message-icon"
+                height={20}
+                width={20}
+                className=" object-contain"
+              />
+            </li>
+            <li className=" h-10 rounded-56 hover:bg-light-grey flex items-center justify-center px-2 gap-4 cursor-pointer">
+              <Image
+                src={"/assets/icons/plus.svg"}
+                alt="plus-icon"
+                height={25}
+                width={25}
+                className=" object-contain"
+              />
+              <span className="font-BH-Satoshi-medium">Create</span>
+            </li>
+            <li className=" h-10 w-10 rounded-full hover:bg-light-grey flex items-center justify-center cursor-pointer">
               <Image
                 src={"/assets/icons/bell.svg"}
                 alt="bell-icon"
@@ -24,7 +43,7 @@ export default function TopNavbar() {
                 className=" object-contain"
               />
             </li>
-            <li className=" h-10 w-10 rounded-full hover:bg-light-grey flex items-center justify-center">
+            <li className=" h-10 w-10 rounded-full hover:bg-light-grey flex items-center justify-center cursor-pointer relative">
               <Image
                 src={"/assets/images/yato-image.jpg"}
                 alt="profile-image"
@@ -32,6 +51,7 @@ export default function TopNavbar() {
                 width={30}
                 className="rounded-full object-contain"
               />
+              <div className="absolute h-2 w-2 rounded-full right-1 border border-white-primary bg-green-online bottom-1"></div>
             </li>
           </ul>
         </div>

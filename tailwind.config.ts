@@ -21,6 +21,7 @@ export default {
       "dark-grey": "#202c38",
       "bright-orange": "#F93827",
       transparent: "rgba(0, 0, 0, 0)",
+      "green-online": "#16C47F",
     },
 
     fontSize: {
