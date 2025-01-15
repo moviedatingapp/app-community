@@ -17,8 +17,8 @@ export default function SearchBar() {
         <div
           className={`outline-none px-5 bg-light-grey w-116 rounded-56 flex hover:bg-light-grey-border ${
             isTyping
-              ? "border-2 border-blue-primary bg-light-grey-border"
-              : "active:border-2 active:border-blue-primary focus-within:border-blue-primary"
+              ? "outline-2 outline-blue-primary outline-offset-[-2px] bg-light-grey-border"
+              : "active:outline-2 active:outline-blue-primary active:outline-offset-[-2px] focus-within:outline-blue-primary focus-within:outline-offset-[-2px]"
           }`}
           onClick={() => setIsTyping(true)}
         >
