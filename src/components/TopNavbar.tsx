@@ -4,7 +4,7 @@ import SearchBar from "./SearchBar";
 
 export default function TopNavbar() {
   return (
-    <header className=" h-12">
+    <header className=" h-12 sticky top-0">
       <nav className="flex justify-between items-center  py-2 border-b-light-grey-border border-b px-8">
         <div>
           {/* <Image src={'/assets/images/yato-image.jpg'} alt="logo" height={} width={}/> */}

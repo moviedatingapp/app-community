@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import TopNavbar from "@/components/TopNavbar";
+import SideNavbar from "@/components/SideNavbar";
 
 export const metadata: Metadata = {
   title: "Movie App",
@@ -15,8 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` antialiased`}>
+      <body className={` antialiased relative`}>
         <TopNavbar />
+        <SideNavbar />
         {children}
       </body>
     </html>
