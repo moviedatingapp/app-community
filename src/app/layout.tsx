@@ -17,9 +17,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` antialiased relative`}>
-        <TopNavbar />
-        <SideNavbar />
-        {children}
+        <main className=" flex flex-col">
+          <TopNavbar />
+          <section className=" flex ">
+            <SideNavbar />
+
+            {children}
+          </section>
+        </main>
       </body>
     </html>
   );
