@@ -25,6 +25,38 @@ export const menuItems = [
   },
 ];
 
+export const profileMenuItems = [
+  {
+    menuItemName: "profile",
+    menuItemLink: "/profile",
+    menuItemIcon:"/assets/icons/house.svg",
+    menuItemAlternateName: "profile-icon",
+  },
+  {
+    menuItemName: "Posts",
+    menuItemLink: "/profile",
+    menuItemIcon:"/assets/icons/messages-square.svg",
+    menuItemAlternateName: "profile-icon",
+  },
+  {
+    menuItemName: "Settings",
+    menuItemLink: "/profile",
+    menuItemIcon:"/assets/icons/settings.svg",
+    menuItemAlternateName: "profile-icon",
+  },
+  {
+    menuItemName: "Premium",
+    menuItemLink: "/profile",
+    menuItemIcon:"/assets/icons/banknote.svg",
+    menuItemAlternateName: "profile-icon",
+  },
+  {
+    menuItemName: "Log Out",
+    menuItemLink: "/profile",
+    menuItemIcon:"/assets/icons/log-out.svg",
+    menuItemAlternateName: "profile-icon",
+  },
+]
 export const dropDownMenuItems = [
   {
     menuItemName: "custom feeds",
@@ -70,7 +102,12 @@ export interface MenuItemsType {
   menuItemImageLink: string;
   menuItemImageAltName: string;
 }
-
+export interface ProfileMenuItemsType{
+  menuItemName: string;
+  menuItemLink: string;
+  menuItemIcon: string;
+  menuItemAlternateName: string;
+}
 export interface DropDownMenuItemsType {
   menuItemName: string;
   subMenuItems: {
