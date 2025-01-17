@@ -53,7 +53,7 @@ export default function SideNavbar() {
                 className="flex justify-between items-center px-5 hover:bg-light-grey-secondary py-2 rounded-8 cursor-pointer"
                 onClick={() => toggleDropdown(index)}
               >
-                <span className="text-grey-primary uppercase">
+                <span className="text-grey-primary uppercase select-none">
                   {menuItem.menuItemName}
                 </span>
                 <Image
@@ -61,7 +61,7 @@ export default function SideNavbar() {
                   alt="arrow-down"
                   height={20}
                   width={20}
-                  className={`transform transition-transform duration-200 ${
+                  className={`transform transition-transform duration-200 select-none ${
                     openDropdowns === index ? "rotate-180" : "rotate-0"
                   }`}
                 />

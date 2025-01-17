@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  user-select: none;
-}
-
 @font-face {
   font-family: "Satoshi Type Bold";
   src: url("/fonts/Satoshi-Bold.ttf");

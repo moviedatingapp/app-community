@@ -19,10 +19,11 @@ export default function RootLayout({
       <body className={` antialiased relative`}>
         <main className=" flex flex-col">
           <TopNavbar />
-          <section className=" flex ">
+          <section className="flex">
             <SideNavbar />
-
-            {children}
+            <section className="flex flex-row items-center justify-center h-full w-full pt-10">
+              {children}
+            </section>
           </section>
         </main>
       </body>

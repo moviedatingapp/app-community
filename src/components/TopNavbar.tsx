@@ -20,7 +20,7 @@ export default function TopNavbar() {
     <header className=" h-12 sticky top-0">
       <nav className="flex justify-between items-center py-2 border-b-light-grey-border border-b px-8">
         <div>
-          <h1>LOGO</h1>
+          <h1 className=" select-none">LOGO</h1>
         </div>
         <div>
           <SearchBar />
@@ -33,7 +33,7 @@ export default function TopNavbar() {
                 alt="message-icon"
                 height={20}
                 width={20}
-                className=" object-contain"
+                className=" object-contain select-none"
               />
             </li>
             <li className=" h-10 rounded-56 hover:bg-light-grey flex items-center justify-center px-2 gap-4 cursor-pointer">
@@ -42,9 +42,9 @@ export default function TopNavbar() {
                 alt="plus-icon"
                 height={25}
                 width={25}
-                className=" object-contain"
+                className=" object-contain select-none"
               />
-              <span className="font-BH-Satoshi-medium">Create</span>
+              <span className="font-BH-Satoshi-medium select-none">Create</span>
             </li>
             <li className=" h-10 w-10 rounded-full hover:bg-light-grey flex items-center justify-center cursor-pointer">
               <Image
@@ -52,7 +52,7 @@ export default function TopNavbar() {
                 alt="bell-icon"
                 height={20}
                 width={20}
-                className=" object-contain"
+                className=" object-contain select-none"
               />
             </li>
             <li
