@@ -5,6 +5,10 @@ import SearchBar from "./SearchBar";
 import { profileMenuItems } from "@/data";
 
 export default function TopNavbar() {
+
+  const [isChatBoxOpen, setIsChatBoxOpen]= React.useState(false);
+
+  const [isNotificationDropDownOpen, setIsNotificationDropDownOpen] = React.useState(false);
   
   const [isDropDownOpen, setIsDropDownOpen] = React.useState(false);
   return (
@@ -19,7 +23,8 @@ export default function TopNavbar() {
         </div>
         <div>
           <ul className="flex gap-4">
-            <li className=" h-10 w-10 rounded-full hover:bg-light-grey flex items-center justify-center cursor-pointer">
+
+            <li className=" h-10 w-10 rounded-full hover:bg-light-grey flex items-center justify-center cursor-pointer relative" onClick={() => setIsChatBoxOpen(!isChatBoxOpen)}>
               <Image
                 src={"/assets/icons/message-circle-more.svg"}
                 alt="message-icon"
@@ -27,7 +32,18 @@ export default function TopNavbar() {
                 width={20}
                 className=" object-contain"
               />
-            </li>
+              <div className="absolute h-2 w-2 rounded-full bg-red-bright top-1 right-1 border border-white-primary"></div>
+              </li>
+
+              {isChatBoxOpen && (<div className="fixed bottom-4 right-4 w-[500px] h-[600px] rounded-tr-[10px] rounded-tl-[10px] bg-white-primary  shadow-drop-down-shadow gap-12 flex">
+
+              </div>
+              )}
+
+
+            
+
+
             <li className=" h-10 rounded-56 hover:bg-light-grey flex items-center justify-center px-2 gap-4 cursor-pointer">
               <Image
                 src={"/assets/icons/plus.svg"}
@@ -38,7 +54,8 @@ export default function TopNavbar() {
               />
               <span className="font-BH-Satoshi-medium">Create</span>
             </li>
-            <li className=" h-10 w-10 rounded-full hover:bg-light-grey flex items-center justify-center cursor-pointer">
+
+            <li className=" h-10 w-10 rounded-full hover:bg-light-grey flex items-center justify-center cursor-pointer relative" onClick={() => setIsNotificationDropDownOpen(!isNotificationDropDownOpen)}>
               <Image
                 src={"/assets/icons/bell.svg"}
                 alt="bell-icon"
@@ -46,7 +63,18 @@ export default function TopNavbar() {
                 width={20}
                 className=" object-contain"
               />
+              {/* Red notification indicator */}
+              <div className="absolute h-2 w-2 rounded-full bg-red-bright top-1 right-1 border border-white-primary"></div>
+              {isNotificationDropDownOpen && (<div className="h-auto w-60 top-12 rounded-br-10 rounded-bl-10 absolute shadow-drop-down-shadow py-4 px-6 right-0 flex flex-col gap-8 ">
+
+              <div className="flex gap-12 py-2 hover:bg-light-grey-secondary cursor-pointer hover:rounded-8">
+                hello
+              </div>
+              </div>)}
             </li>
+
+
+
             <li className=" h-10 w-10 rounded-full hover:bg-light-grey flex items-center justify-center cursor-pointer relative" onClick={() => setIsDropDownOpen(!isDropDownOpen)} >
               <Image
                 src={"/assets/images/yato-image.jpg"}
@@ -75,6 +103,8 @@ export default function TopNavbar() {
                 )}
               </div>)}
             </li>
+
+
           </ul>
         </div>
       </nav>

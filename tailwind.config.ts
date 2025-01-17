@@ -77,7 +77,7 @@ export default {
         116: "35rem",
       },
       boxShadow: {
-        "drop-down-shadow": "10px 5px 15px -1px rgba(0,0,0,0.1),-10px 10px 15px -3px rgba(0,0,0,0.1)"
+        "drop-down-shadow": "15px -15px 15px -3px rgba(0,0,0,0.1),-15px 10px 15px -3px rgba(0,0,0,0.1)"
       }
     },
   },
