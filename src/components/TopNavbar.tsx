@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import SearchBar from "./SearchBar";
 import ProfileDropdown from "./dropdown/ProfileDropdown";
 import { useClickOutside } from "@/hooks/useClickOutside";
+import Link from "next/link";
 
 export default function TopNavbar() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -36,16 +37,20 @@ export default function TopNavbar() {
                 className=" object-contain select-none"
               />
             </li>
-            <li className=" h-10 rounded-56 hover:bg-light-grey flex items-center justify-center px-2 gap-4 cursor-pointer">
-              <Image
-                src={"/assets/icons/plus.svg"}
-                alt="plus-icon"
-                height={25}
-                width={25}
-                className=" object-contain select-none"
-              />
-              <span className="font-BH-Satoshi-medium select-none">Create</span>
-            </li>
+            <Link href={"/create-post"}>
+              <li className=" h-10 rounded-56 hover:bg-light-grey flex items-center justify-center px-2 gap-4 cursor-pointer">
+                <Image
+                  src={"/assets/icons/plus.svg"}
+                  alt="plus-icon"
+                  height={25}
+                  width={25}
+                  className=" object-contain select-none"
+                />
+                <span className="font-BH-Satoshi-medium select-none">
+                  Create
+                </span>
+              </li>
+            </Link>
             <li className=" h-10 w-10 rounded-full hover:bg-light-grey flex items-center justify-center cursor-pointer">
               <Image
                 src={"/assets/icons/bell.svg"}
