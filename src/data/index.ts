@@ -29,34 +29,34 @@ export const profileMenuItems = [
   {
     menuItemName: "profile",
     menuItemLink: "/profile",
-    menuItemIcon:"/assets/icons/house.svg",
+    menuItemIcon: "/assets/icons/house.svg",
     menuItemAlternateName: "profile-icon",
   },
   {
     menuItemName: "Posts",
     menuItemLink: "/profile",
-    menuItemIcon:"/assets/icons/messages-square.svg",
+    menuItemIcon: "/assets/icons/messages-square.svg",
     menuItemAlternateName: "profile-icon",
   },
   {
     menuItemName: "Settings",
     menuItemLink: "/profile",
-    menuItemIcon:"/assets/icons/settings.svg",
+    menuItemIcon: "/assets/icons/settings.svg",
     menuItemAlternateName: "profile-icon",
   },
   {
     menuItemName: "Premium",
     menuItemLink: "/profile",
-    menuItemIcon:"/assets/icons/banknote.svg",
+    menuItemIcon: "/assets/icons/banknote.svg",
     menuItemAlternateName: "profile-icon",
   },
   {
     menuItemName: "Log Out",
     menuItemLink: "/profile",
-    menuItemIcon:"/assets/icons/log-out.svg",
+    menuItemIcon: "/assets/icons/log-out.svg",
     menuItemAlternateName: "profile-icon",
   },
-]
+];
 export const dropDownMenuItems = [
   {
     menuItemName: "custom feeds",
@@ -96,13 +96,39 @@ export const dropDownMenuItems = [
   },
 ];
 
+// Text Images&Videos Link Poll
+
+export const createPostNavItems = [
+  {
+    itemName: "Text",
+    itemType: "Text",
+  },
+  {
+    itemName: "Images & Video",
+    itemType: "Image",
+  },
+  {
+    itemName: "Link",
+    itemType: "Link",
+  },
+  {
+    itemName: "Poll",
+    itemType: "Poll",
+  },
+];
+
+export interface CreatePostNavItemType {
+  itemName: string;
+  itemType: string;
+}
+
 export interface MenuItemsType {
   menuItemName: string;
   menuItemLink: string;
   menuItemImageLink: string;
   menuItemImageAltName: string;
 }
-export interface ProfileMenuItemsType{
+export interface ProfileMenuItemsType {
   menuItemName: string;
   menuItemLink: string;
   menuItemIcon: string;
