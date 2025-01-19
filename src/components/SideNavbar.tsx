@@ -1,10 +1,6 @@
 "use client";
-import {
-  dropDownMenuItems,
-  DropDownMenuItemsType,
-  menuItems,
-  MenuItemsType,
-} from "@/data";
+import { dropDownMenuItems, menuItems } from "@/data";
+import { DropDownMenuItemsType, MenuItemsType } from "@/data/types";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";

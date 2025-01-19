@@ -1,5 +1,6 @@
 "use client";
 import { editableIcons } from "@/data";
+import { EditableIconsType } from "@/data/types";
 import Image from "next/image";
 import React, { useRef, useState, useEffect } from "react";
 
@@ -48,7 +49,7 @@ const TextArea: React.FC = () => {
   return (
     <div className="w-full border-light-grey-border rounded-24 border">
       <div className="flex gap-14 p-3">
-        {editableIcons.map((editableIcon, index) => {
+        {editableIcons.map((editableIcon: EditableIconsType, index) => {
           const isActive = activeFormats.includes(editableIcon.iconApplyFormat);
           return (
             <button
