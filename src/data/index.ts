@@ -121,6 +121,52 @@ export const createPostNavItems = [
   },
 ];
 
+export const editableIcons = [
+  {
+    iconName: "Bold",
+    iconSrc: "/assets/icons/bold.svg",
+    iconAlt: "bold-icon",
+    iconApplyFormat: "bold",
+  },
+  {
+    iconName: "Italic",
+    iconSrc: "/assets/icons/italic.svg",
+    iconAlt: "italic-icon",
+    iconApplyFormat: "italic",
+  },
+  {
+    iconName: "Underline",
+    iconSrc: "/assets/icons/underline.svg",
+    iconAlt: "underline-icon",
+    iconApplyFormat: "underline",
+  },
+  {
+    iconName: "Ordered List",
+    iconSrc: "/assets/icons/list-ordered.svg",
+    iconAlt: "ordered-list-icon",
+    iconApplyFormat: "insertOrderedList",
+  },
+  {
+    iconName: "Unordered List",
+    iconSrc: "/assets/icons/list-collapse.svg",
+    iconAlt: "unordered-list-icon",
+    iconApplyFormat: "insertUnorderedList",
+  },
+  {
+    iconName: "Link",
+    iconSrc: "/assets/icons/link.svg",
+    iconAlt: "link-icon",
+    iconApplyFormat: "createLink",
+  },
+];
+
+export interface EditableIconsType {
+  iconName: string;
+  iconSrc: string;
+  iconAlt: string;
+  iconApplyFormat: string;
+}
+
 export interface CreatePostNavItemType {
   itemName: string;
   itemType: string;
