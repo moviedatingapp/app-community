@@ -7,18 +7,30 @@ const TextArea: React.FC = () => {
   const editorRef = useRef<HTMLDivElement>(null);
   const [activeFormats, setActiveFormats] = useState<string[]>([]);
 
-  // Function to apply formatting
   const applyFormat = (command: string, value?: string) => {
     if (editorRef.current && document.queryCommandSupported(command)) {
-      document.execCommand(command, false, value);
-      editorRef.current.focus();
-      updateActiveFormats(); // Update active formats after applying the style
+      if (command === "createLink") {
+        const url = prompt("Enter the URL:", "");
+        if (url) {
+          document.execCommand(command, false, url);
+          editorRef.current.focus();
+        }
+      } else if (
+        command === "insertOrderedList" ||
+        command === "insertUnorderedList"
+      ) {
+        document.execCommand(command, false);
+        editorRef.current.focus();
+      } else {
+        document.execCommand(command, false, value);
+        editorRef.current.focus();
+      }
+      updateActiveFormats();
     } else {
       console.warn(`Command "${command}" is not supported.`);
     }
   };
 
-  // Function to check and update active formats
   const updateActiveFormats = () => {
     const newActiveFormats: string[] = [];
     editableIcons.forEach((icon) => {
@@ -29,7 +41,6 @@ const TextArea: React.FC = () => {
     setActiveFormats(newActiveFormats);
   };
 
-  // Check active formats on mount and whenever the content in the editor changes
   useEffect(() => {
     updateActiveFormats();
   }, []);
