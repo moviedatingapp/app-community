@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Style for ordered and unordered lists */
+[contenteditable="true"] ul {
+  padding-left: 20px; /* Adds padding to the left for unordered list items */
+  list-style-type: disc; /* Disc for unordered lists */
+}
+
+[contenteditable="true"] ol {
+  padding-left: 20px; /* Adds padding to the left for ordered list items */
+  list-style-type: decimal; /* Decimal for ordered lists */
+}
+
+[contenteditable="true"] li {
+  /* Ensures consistent styling for list items */
+}
+
 @font-face {
   font-family: "Satoshi Type Bold";
   src: url("/fonts/Satoshi-Bold.ttf");
