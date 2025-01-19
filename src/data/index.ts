@@ -102,18 +102,22 @@ export const createPostNavItems = [
   {
     itemName: "Text",
     itemType: "Text",
+    itemValue: "text",
   },
   {
     itemName: "Images & Video",
     itemType: "Image",
+    itemValue: "image",
   },
   {
     itemName: "Link",
     itemType: "Link",
+    itemValue: "link",
   },
   {
     itemName: "Poll",
     itemType: "Poll",
+    itemValue: "poll",
   },
 ];
 
