@@ -1,21 +1,37 @@
+"use client";
 import { createPostNavItems } from "@/data";
 import React from "react";
 import Input from "./Input";
 import TextArea from "./TextArea";
+import { useFormContext } from "react-hook-form";
 
 export default function CreatePostForm() {
+  const { register } = useFormContext();
+
   return (
-    <section className="w-full">
+    <section className="w-full flex flex-col gap-16">
       <div className="w-1/2 flex justify-between">
         {createPostNavItems.map((navItem, index) => {
           return (
-            <button
-              type="button"
+            <div
               key={index}
-              className=" font-BH-Satoshi-medium p-2 hover:bg-light-grey border-b-4 border-b-blue-primary"
+              className="relative hover:bg-light-grey py-2 px-4 cursor-pointer"
+              onClick={() => document.getElementById(navItem.itemType)?.click()}
             >
-              {navItem.itemName}
-            </button>
+              <input
+                type="radio"
+                value={navItem.itemValue}
+                id={navItem.itemType}
+                {...register("navItems")}
+                className="hidden peer"
+              />
+              <label
+                htmlFor={navItem.itemType}
+                className="font-BH-Satoshi-medium py-1 cursor-pointer peer-checked:border-b-4 peer-checked:border-blue-primary"
+              >
+                {navItem.itemName}
+              </label>
+            </div>
           );
         })}
       </div>

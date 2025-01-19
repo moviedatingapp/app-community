@@ -1,4 +1,6 @@
 "use client";
+import { editableIcons } from "@/data";
+import Image from "next/image";
 import React, { useRef } from "react";
 
 const TextArea: React.FC = () => {
@@ -14,59 +16,30 @@ const TextArea: React.FC = () => {
   };
 
   return (
-    <div className="w-full">
-      <div className="flex gap-2 mb-4">
-        <button
-          type="button"
-          className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded"
-          onClick={() => applyFormat("bold")}
-        >
-          Bold
-        </button>
-        <button
-          type="button"
-          className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded"
-          onClick={() => applyFormat("italic")}
-        >
-          Italic
-        </button>
-        <button
-          type="button"
-          className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded"
-          onClick={() => applyFormat("underline")}
-        >
-          Underline
-        </button>
-        <button
-          type="button"
-          className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded"
-          onClick={() => applyFormat("insertOrderedList")}
-        >
-          Ordered List
-        </button>
-        <button
-          type="button"
-          className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded"
-          onClick={() => applyFormat("insertUnorderedList")}
-        >
-          Unordered List
-        </button>
-        <button
-          type="button"
-          className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded"
-          onClick={() => {
-            const url = prompt("Enter URL:") || "";
-            if (url) applyFormat("createLink", url);
-          }}
-        >
-          Link
-        </button>
+    <div className="w-full  border-light-grey-border rounded-24 border">
+      <div className="flex gap-14 p-3">
+        {editableIcons.map((editableIcon, index) => {
+          return (
+            <button
+              key={index}
+              type="button"
+              className=" p-2 bg-gray-200 hover:bg-gray-300 rounded-full hover:bg-light-grey"
+              onClick={() => applyFormat(editableIcon.iconApplyFormat)}
+            >
+              <Image
+                src={editableIcon.iconSrc}
+                alt={editableIcon.iconAlt}
+                width={15}
+                height={15}
+              />
+            </button>
+          );
+        })}
       </div>
-
       <div
         ref={editorRef}
         contentEditable
-        className="w-full outline-none h-44 text-dark-grey border-light-grey-border rounded-24 border p-4 bg-white"
+        className="w-full outline-none h-44 text-dark-grey px-6 bg-white"
         suppressContentEditableWarning={true}
       ></div>
     </div>
