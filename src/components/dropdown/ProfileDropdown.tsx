@@ -12,7 +12,7 @@ export default function ProfileDropdown() {
       {profileMenuItems.map((menuitem: ProfileMenuItemsType, index) => (
         <div
           key={index}
-          className="flex gap-12 py-2 hover:bg-light-grey-secondary cursor-pointer hover:rounded-8"
+          className="flex gap-12 py-2 hover:bg-light-grey-secondary cursor-pointer hover:rounded-8 px-2"
         >
           <Image
             src={menuitem.menuItemIcon}
