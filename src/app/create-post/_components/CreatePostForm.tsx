@@ -4,6 +4,7 @@ import React from "react";
 import Input from "./Input";
 import TextArea from "./TextArea";
 import { useFormContext } from "react-hook-form";
+import { CreatePostNavItemType } from "@/data/types";
 
 export default function CreatePostForm() {
   const { register } = useFormContext();
@@ -11,7 +12,7 @@ export default function CreatePostForm() {
   return (
     <section className="w-full flex flex-col gap-16">
       <div className="w-1/2 flex justify-between">
-        {createPostNavItems.map((navItem, index) => {
+        {createPostNavItems.map((navItem: CreatePostNavItemType, index) => {
           return (
             <div
               key={index}
