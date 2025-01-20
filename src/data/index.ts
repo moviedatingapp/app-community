@@ -159,18 +159,3 @@ export const editableIcons = [
     iconApplyFormat: "createLink",
   },
 ];
-
-export interface MenuItemsType {
-  menuItemName: string;
-  menuItemLink: string;
-  menuItemImageLink: string;
-  menuItemImageAltName: string;
-}
-
-export interface DropDownMenuItemsType {
-  menuItemName: string;
-  subMenuItems: {
-    subMenuItemName: string;
-    subMenuItemLink: string;
-  }[];
-}
